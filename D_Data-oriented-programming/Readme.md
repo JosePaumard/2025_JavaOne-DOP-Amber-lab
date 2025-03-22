@@ -1,6 +1,16 @@
 Refactoring to Data Oriented Programming
 ========================================
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Presenting the Application](#presenting-the-application)
+3. [Goal of the Refactoring](#goal-of-the-refactoring)
+4. [Exploring and Running the Application](#exploring-and-running-the-application)
+5. [Step 1: Fixing the Dependencies](#step-1-fixing-the-dependencies)
+6. [Step 2: Moving to a Data Oriented Programming Approach](#step-2-moving-to-a-data-oriented-programming-approach)
+7. [Step 3: Adding the Support for Multileg Flights](#step-3-adding-the-support-for-multileg-flights)
+
 ## Introduction
 
 This lab takes you through the refactoring of a legacy application using Data Oriented Programming Principles, so that you can see what you can take from these ideas to improve the quality of your code and architecture.
@@ -14,6 +24,7 @@ The principle of the application is the following.
 
 Of course all of this is made as simple as possible: there is no network connection, the database is just an in-memory hash table, and the GUI is simply the console.
 
+[<< Back to top](#table-of-contents)
 
 ## Presenting the Application
 
@@ -34,6 +45,7 @@ There are many flaws in this application, not only in the code, but also in the 
 5. Many things are not working in this application. For instance, your entities are used throughout all your modules. Which is absurd: your GUI or your consumers shouldn't depend on your Hibernate entities.
 6. Because everything is so tightly entangled, adding the support for multileg flights is hard, and will be very costly.
 
+[<< Back to top](#table-of-contents)
 
 ## Goal of the Refactoring
 
@@ -41,6 +53,8 @@ The goal of the refactoring is to organize the application in such a way that th
 
 Then, once this refactoring is done, you will see how adding the support for multileg flights can be done very easily, using sealed types and pattern matching.
 
+
+[<< Back to top](#table-of-contents)
 
 ## Exploring and Running the Application
 
@@ -78,6 +92,7 @@ Flight from Paris to Atlanta: price is now 86
 Flight from Amsterdam to New York: price is now 88
 Flight from London to Miami: price is now 83
 ```
+[<< Back to top](#table-of-contents)
 
 
 ## Step 1: Fixing the Dependencies
@@ -435,7 +450,7 @@ Flight from Francfort to Washington: price is now 105
 Flight from Amsterdam to New York: price is now 113
 Flight from London to Miami: price is now 110
 ```
-
+[<< Back to top](#table-of-contents)
 
 ## Step 2: Moving to a Data Oriented Programming Approach
 
@@ -732,7 +747,7 @@ Flight from Francfort to Washington: price is now 105
 Flight from Amsterdam to New York: price is now 113
 Flight from London to Miami: price is now 110
 ```
-
+[<< Back to top](#table-of-contents)
 
 ## Step 3: Adding the Support for Multileg Flights
 
@@ -922,3 +937,5 @@ Flight from Amsterdam to New York: price is now 110
 ```
 
 Congratulations, you have reached the end of this hands on lab! Thank you for sending us comments, corrections, or any feedback you may have. 
+
+[<< Back to top](#table-of-contents)
